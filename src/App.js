@@ -1,14 +1,16 @@
+import { Provider } from "react-redux";
 import "./App.css";
 import Dashboard from "./pages/Dashboard";
 import { BrowserRouter } from "react-router-dom";
+import store from "./redux/store";
 
 function App() {
   return (
-    <div className="App">
+    <Provider store={store}>
       <BrowserRouter>
         <Dashboard></Dashboard>
       </BrowserRouter>
-    </div>
+    </Provider>
   );
 }
 
